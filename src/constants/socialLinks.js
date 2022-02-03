@@ -1,3 +1,4 @@
+//import React if we want to set up the following as component
 import React from "react"
 import {
   FaFacebookSquare,
@@ -5,13 +6,17 @@ import {
   FaDribbbleSquare,
   FaBehanceSquare,
   FaTwitterSquare,
+  FaWhatsappSquare,
+  FaPhoneSquare,
 } from "react-icons/fa"
 
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://www.twitter.com",
+    icon: (
+      <FaFacebookSquare className="social-icon"></FaFacebookSquare>
+    ),
+    url: "https://twitter.com/share?ref_src=twsrc%5Etfw",
   },
   {
     id: 2,
@@ -31,6 +36,16 @@ const data = [
   {
     id: 5,
     icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
+    url: "https://twitter.com/share?ref_src=twsrc%5Etfw",
+  },
+  {
+    id: 6,
+    icon: <FaWhatsappSquare className="social-icon"></FaWhatsappSquare>,
+    url: "https://www.twitter.com",
+  },
+  {
+    id: 7,
+    icon: <FaPhoneSquare className="social-icon"></FaPhoneSquare>,
     url: "https://www.twitter.com",
   },
 ]

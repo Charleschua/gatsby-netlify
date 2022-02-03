@@ -26,6 +26,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `video`,
+        path: `${__dirname}/src/assets/videos`,
+      },
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1337`,
@@ -33,8 +48,8 @@ module.exports = {
         //   contentTypes : `jobs`, `projects`, `blogs`,
         //   singleType : `about`
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [],
-        singleTypes: [],
+        contentTypes: [`jobs`, `projects`, `blogs`],
+        singleTypes: [`about`],
       },
     },
     // {
@@ -51,5 +66,22 @@ module.exports = {
     //     },
     //   },
     // },
+    {
+      resolve: `gatsby-plugin-posthog`,
+      options: {
+        // Specify the API key for your Posthog Project (required)
+        apiKey: "phc_b9vWRfKQcy2vkrzP0FbkNZCVVzTeHLWngoAe74vTpoo",
+        // Specify the app host if self-hosting (optional, default: https://app.posthog.com)
+        apiHost: "https://app.posthog.com",
+        // Puts tracking script in the head instead of the body (optional, default: true)
+        head: true,
+        // Enable posthog analytics tracking during development (optional, default: false)
+        isEnabledDevMode: true,
+        // Pass custom variables to posthog.init() (optional)
+        initOptions: {
+          // ...
+        },
+      },
+    },
   ],
 }
