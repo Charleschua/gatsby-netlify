@@ -12,6 +12,7 @@ module.exports = {
     twitterUsername: "@john_smilga",
     image: "/twitter-img.png",
     siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    flags: { PRESERVE_WEBPACK_CACHE: true },
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -44,7 +45,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.DEPLOY_URL
-          ? "https://singapore-real-estate-launch.herokuapp.com"
+          ? "https://blooming-sierra-57972.herokuapp.com"
           : "http://localhost:1337",
         queryLimit: 1000, // Default to 100
         //   contentTypes : `jobs`, `projects`, `blogs`,
