@@ -45,7 +45,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.DEPLOY_URL
-          ? "https://blooming-sierra-57972.herokuapp.com"
+          ? "https://strapi-heroku-6.herokuapp.com"
           : "http://localhost:1337",
         queryLimit: 5000, // Default to 100
         //   contentTypes : `jobs`, `projects`, `blogs`,
