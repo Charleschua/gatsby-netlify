@@ -32,13 +32,13 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build the site
         run: |
-          yarn install --production
-          yarn build
+          npm install --production
+          npm run productionbuild
           
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.3
         with:
-          publish-dir: './public'
+          publish-dir: "./public"
           production-branch: main
           deploy-message: '${{github.event.head_commit.message}}'
         env:
