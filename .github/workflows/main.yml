@@ -33,7 +33,7 @@ jobs:
       - name: Build the site
         run: |
           npm install --production
-          npm run productionbuild
+          npm run build
           
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.3
