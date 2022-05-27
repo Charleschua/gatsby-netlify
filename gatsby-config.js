@@ -44,7 +44,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.NODE_ENV
+        apiURL: process.env.DEPLOY_URL
           ? "https://whispering-atoll-93697.herokuapp.com"
           : "http://localhost:1337",
         queryLimit: 5000, // Default to 100
