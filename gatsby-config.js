@@ -46,8 +46,8 @@ module.exports = {
       options: {
         apiURL: process.env.DEPLOY_URL
           ? "https://whispering-atoll-93697.herokuapp.com"
-          : "http://127.0.0.1:1337",
-        queryLimit: 10000, // Default to 100
+          : "http://localhost:1337",
+        queryLimit: 5000, // Default to 100
         //   contentTypes : `jobs`, `projects`, `blogs`,
         //   singleType : `about`
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
